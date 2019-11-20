@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Weather Project</title>
+<style>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	h1 {
+		    font-family: Futura;
+		    font-size: 50px;
+		}
+	html, body {
+		    font-family:Futura;
+		    font-size: 22px;
+		    color: white;
+		    position: absolute;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+	p{
+		position:absolute;
+		left:25px;
+	}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+</style>
+</head>
+<body>
+
+
+<p onclick="toggle(this)"; style="font-size: 16px">The Weather Project
+</p>
+
+<p style="left: 870px; font-size: 16px">The time is <script>
+	var currentTime = new Date(),
+      hours = currentTime.getHours(),
+      minutes = currentTime.getMinutes();
+
+	if (minutes < 10) {
+	 minutes = "0" + minutes;
+  }
+
+	var suffix = "AM";
+	if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+	}
+	if (hours == 0) {
+	 hours = 12;
+	}
+
+	document.write(hours + ":" + minutes + " " + suffix)
+</script> in Providence, Rhode Island.
+</p>
+
+<iframe height="99.5%" width="99.5%" allowfullscreen="true" 
+src="https://momento360.com/e/u/62b09e81e91342e5bd89c5343a241f08?utm_campaign=embed&utm_source=other&utm_medium=other&heading=-60&pitch=0&field-of-view=100"> </iframe>
+
+<div style=" padding:20px; width: 50%;overflow:scroll; height: 500px; display:none; position:absolute; top:70px;color:white;font-size: 28px" id="cont">
+
+        <div>
+            Created for the Turbine Hall of Tate Modern, London, this site-specific installation employed a semi-circular screen, a ceiling of mirrors, and artificial mist to create the illusion of a sun. Aluminium frames lined with mirror foil were suspended from the ceiling to create a giant mirror that visually doubled the volume of the hall – along with the semi-circular screen mounted on the far wall, its long edge abutting the mirror ceiling. Backlit by approximately 200 mono-frequency lights, the semi-circle and its reflection created the image of a massive, indoor sunset seen through the artificial mist emitted into the room. By walking to the far end of the hall, visitors could see how the sun was constructed, and the reverse of the mirror structure was visible from the top floor of the museum.
+
+In preparation for the exhibition, Eliasson devised a questionnaire for the employees at Tate Modern that included questions such as: ‘Has a weather phenomenon ever changed the course of your life dramatically?’ ‘Do you think tolerance to other individuals is proportional to the weather?’ ‘To what extent are you aware of the weather outside your workplace?’ The results were published in the catalogue accompanying the exhibition, which also included a roundtable discussion about the communication of art, meteorological reports of freak weather events, weather statistics, and a series of essays on the weather, time, and space.
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    function toggle(ele) {
+        var cont = document.getElementById('cont');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+
+            document.getElementById(ele.id).value = 'Show DIV';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Hide DIV';
+        }
+    }
+</script>
+</html>
